@@ -32,3 +32,9 @@
 	plink --bfile data_out --extract indep_snp.prune.in --genome --min 0.2 --out pihat_min0.2
 	awk '{ if ($8 >0.9) print $0 }' pihat_min0.2.genome > zoom_pihat.genome
 	plink --bfile data_out --filter-founders --make-bed --out data_out					#remove data from relatedness
+
+######################################################################
+# plink.bed      ( binary file, genotype information )				 #
+# plink.fam      ( first six columns of mydata.ped ) 				 #
+# plink.bim      ( extended MAP file: two extra cols = allele names) #
+######################################################################
